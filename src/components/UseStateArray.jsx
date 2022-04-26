@@ -24,7 +24,8 @@ const UseStateArray = () => {
     }
 
   return (
-    <div className=''>
+    <div className='py-10'>
+    <h1>UseState hook with Array...</h1>
 
     {
         MyArray.map((data)=> {
@@ -36,6 +37,7 @@ const UseStateArray = () => {
         } )
     }
      <button className='btn' onClick={()=>setArray([])}>Clear All</button>
+     <p className='mt-4 h-1 w-full bg-gray-600 rounded'></p>
     </div>
   )
 }
