@@ -15,6 +15,10 @@ function App() {
 
   return (
     <div>
+    <Link className="btn" to="/useffectapi">Useffect with Api</Link>
+    <Link className="btn ml-2" to="/useContext">UseContext..</Link>
+    <Link className="btn ml-2" to="/reactToastify">React Toastify</Link>
+    <Link className="btn ml-2" to="/todoapp">Todo App</Link>
     <UseState/>
     <UseStateArray/>
     <UseStateObject/>
@@ -24,7 +28,6 @@ function App() {
     <Cleanup/>
     <UseRef/>
     <UseReducer/>
-    <Link className="btn" to="/useffectapi">Useffect with Api</Link>
    </div>
   );
 }
