@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  <BrowserRouter>
    <Routes>
-   <Route exact path='/' element={<App/>}/>
+   <Route exact path='/react-portfolio' element={<App/>}/>
    <Route exact path='/useffectapi' element={<UseEffectApi/>}/>
    </Routes>
  </BrowserRouter>
