@@ -38,7 +38,8 @@ const Todo = () => {
           });
     }
   return (
-    <div className='flex justify-center items-center'>
+      <>
+      <div className='flex justify-center items-center'>
         <div className='flex flex-col justify-center items-center'>
             <img className='w-20' src={book} alt="" />
             <p>Add your list here ✌</p>
@@ -60,6 +61,7 @@ const Todo = () => {
             <ToastContainer />
         </div>
     </div>
+    </>
   )
 }
 

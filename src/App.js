@@ -15,10 +15,14 @@ function App() {
 
   return (
     <div>
+    <div className="grid grid-cols-3 gap-8">
     <Link className="btn" to="/useffectapi">Useffect with Api</Link>
     <Link className="btn ml-2" to="/useContext">UseContext..</Link>
     <Link className="btn ml-2" to="/reactToastify">React Toastify</Link>
     <Link className="btn ml-2" to="/todoapp">Todo App</Link>
+    <Link className="btn ml-2" to="/todoapplocal">TodoApp LocalStorage</Link>
+    <Link className="btn ml-2" to="/filter">Filter Product</Link>
+    </div>
     <UseState/>
     <UseStateArray/>
     <UseStateObject/>

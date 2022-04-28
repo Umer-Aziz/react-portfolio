@@ -8,6 +8,8 @@ import UseEffectApi from './components/UseEffect/UseEffectApi';
 import ComA from './components/useContext/ComA';
 import ReactToastify from './components/React-toastify/ReactToastify';
 import Todo from './components/Todo/Todo';
+import TodoLocal from './components/Todo/TodoLocal';
+import Gallery from './components/FilterItem/Gallery';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,6 +21,8 @@ root.render(
    <Route exact path='/useContext' element={<ComA/>}/>
    <Route exact path='/reactToastify' element={<ReactToastify/>}/>
    <Route exact path='/todoapp' element={<Todo/>}/>
+   <Route exact path='/todoapplocal' element={<TodoLocal/>}/>
+   <Route exact path='/filter' element={<Gallery/>}/>
    </Routes>
  </BrowserRouter>
    );

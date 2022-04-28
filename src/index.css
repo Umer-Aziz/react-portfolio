@@ -6,7 +6,7 @@
 
 @layer base {
     body {
-        @apply my-20 font-[Roboto] bg-blue-900 min-h-screen text-white flex flex-col justify-center items-center;
+        @apply overflow-x-hidden my-20 font-[Roboto] bg-blue-900 min-h-screen text-white flex flex-col justify-center items-center;
     }
     .text-h1 {
       @apply text-3xl my-2 text-red-600 p-4 bg-white rounded;
@@ -16,6 +16,9 @@
     }
     .btnRed {
         @apply ml-3 text-sm bg-red-500 py-1.5 px-3 rounded hover:bg-red-600 text-white;
+    }
+    .btn-pink {
+        @apply bg-pink-600 hover:bg-pink-700 py-2 px-4 rounded;
     }
     h1{
         @apply text-3xl;
