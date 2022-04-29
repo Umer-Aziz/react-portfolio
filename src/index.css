@@ -6,7 +6,7 @@
 
 @layer base {
     body {
-        @apply overflow-x-hidden my-20 font-[Roboto] bg-blue-900 min-h-screen text-white flex flex-col justify-center items-center;
+        @apply overflow-x-hidden my-20 font-[Roboto] bg-gray-200 min-h-screen text-gray-800 flex flex-col justify-center items-center;
     }
     .text-h1 {
       @apply text-3xl my-2 text-red-600 p-4 bg-white rounded;

@@ -1,39 +1,34 @@
-import React from "react";
-import UseRef from "./components/useRef/useRef";
-import Cleanup from "./components/UseEffect/Cleanup";
-// import UseEffectApi from "./components/UseEffect/UseEffectApi";
-import UseEffects from "./components/UseEffect/UseEffects";
-import LoginForm from "./components/LoginForm";
+import React from 'react'
 
-import ShortCirEvolution from "./components/ShortCirEvolution";
-import UseStateArray from "./components/UseStateArray";
-import UseStateObject from "./components/UseStateObject";
-import UseState from "./components/UsetState";
-import { Link } from "react-router-dom";
-import UseReducer from "./components/useReducer/useReducer";
-function App() {
+import { Inc, Dec ,Divide , Multi } from './actions/Action';
+import {useSelector , useDispatch } from "react-redux";
 
+const App = () => {
+  const state = useSelector( (state)=> state.ChangeNumber );
+  const Mstate = useSelector( (state)=> state.MultiDiv );
+  const dispatch = useDispatch();
   return (
-    <div>
-    <div className="grid grid-cols-3 gap-8">
-    <Link className="btn" to="/useffectapi">Useffect with Api</Link>
-    <Link className="btn ml-2" to="/useContext">UseContext..</Link>
-    <Link className="btn ml-2" to="/reactToastify">React Toastify</Link>
-    <Link className="btn ml-2" to="/todoapp">Todo App</Link>
-    <Link className="btn ml-2" to="/todoapplocal">TodoApp LocalStorage</Link>
-    <Link className="btn ml-2" to="/filter">Filter Product</Link>
+    <>
+    <div className='-mt-40'>
+      <h1 className='uppercase text-4xl text-center'>Redux</h1>
+      <h1>Increment & Decrement Counter</h1>
+      <div className='mt-10 flex justify-center gap-x-4'>
+        <button title='Decrement' onClick={()=> dispatch(Dec(3))} className='bg-gray-300 hover:bg-gray-400 py-2 px-4 rounded'>-</button>
+        <input className='w-10 text-center text-xl' type="text" value={state}/>
+        <button title='Increment' onClick={()=> dispatch(Inc(2))} className='bg-gray-300 hover:bg-gray-400 py-2 px-4 rounded'>+</button>
+      </div>
     </div>
-    <UseState/>
-    <UseStateArray/>
-    <UseStateObject/>
-    <ShortCirEvolution/>
-    <LoginForm/>
-    <UseEffects/>
-    <Cleanup/>
-    <UseRef/>
-    <UseReducer/>
-   </div>
+    <div className='mt-40'>
+      <h1 className='uppercase text-4xl text-center'>Redux</h1>
+      <h1 className='text-center'>Divider & Multiplication</h1>
+      <div className='mt-10 flex justify-center gap-x-4'>
+        <button title='Decrement' onClick={()=> dispatch(Divide(5))} className='bg-gray-300 hover:bg-gray-400 py-2 px-4 rounded'>/</button>
+        <input className='w-10 text-center text-xl' type="text" value={Mstate}/>
+        <button title='Increment' onClick={()=> dispatch(Multi(2))} className='bg-gray-300 hover:bg-gray-400 py-2 px-4 rounded'>*</button>
+      </div>
+    </div>
+    </>
   );
 }
 
-export default App;
+export default App
